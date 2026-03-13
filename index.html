@@ -104,8 +104,8 @@ window.onload = function(){
 
         window.web_chat_init({
             rootId: 'web-chat-root-id',
-            endpoint: 'wss://live-chat.spitch-dev.ai/webhooks/website/69b431089180aab3a88662a7',
-            adapterId: '69b431089180aab3a88662a7',
+            endpoint: 'wss://live-chat.spitch-dev.ai/webhooks/website/690b34241d6a5743fef04495',
+            adapterId: '690b34241d6a5743fef04495',
             // userId is automatically generated if empty
             userId: "",
             // remove userData to enable the 'welcome form' 
@@ -114,6 +114,9 @@ window.onload = function(){
                 firstName: "anonymous", 
                 lastName: "anonymous", 
             },
+            /* enable the polling mode if the endpoint is not available via websockets */
+            pollingMode: false,
+            pollingTimeout: 30000
         });
     });
 </script>
